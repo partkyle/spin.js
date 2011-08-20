@@ -292,3 +292,11 @@
   window.Spinner = Spinner;
 
 })(document);
+
+(function(window, document, $, undefined) {
+  $.fn.spin = function(options) {
+    var self = $(this);
+    new Spinner(options).spin(self[0]);
+    return self;
+  }
+})(window, document, jQuery)
